@@ -21,7 +21,7 @@ Spoken-digit-Recognition/
 ├── hmm.py                      # Hidden Markov Model and Vector Quantizer implementation
 ├── prediction.py               # Model training and evaluation
 └── recordings/                 # Directory for audio data (speaker 1-6)
-    ├── train_recordings/       # Training data (speakers 1-3, 5)
+    ├── train_recordings/       # Training data (speakers 1-5)
     ├── val_recordings/         # Validation data (speaker 4)
     └── test_recordings/        # Test data (speaker 6)
 ```
@@ -57,7 +57,7 @@ Spoken-digit-Recognition/
 ### Training & Evaluation (`prediction.py`)
 - **Data Preparation**: 
   - Normalizes features using global mean and standard deviation
-  - Splits data by speaker (train: 1-3,5 | validation: 4 | test: 6)
+  - Splits data by speaker (train: 1-5 | validation: 4 | test: 6)
   
 - **Model Training**:
   - 10 HMM models (one per digit) with 3 states and 64 VQ symbols
@@ -128,7 +128,7 @@ This script:
 ## Results
 
 The models are evaluated on:
-- **Validation Set**: Speaker 4 (unseen during training)
+- **Validation Set**: Speaker 4
 - **Test Set**: Speaker 6 (completely unseen speaker)
 
 Confusion matrices show per-digit classification accuracy and common confusion patterns.
@@ -144,6 +144,3 @@ Confusion matrices show per-digit classification accuracy and common confusion p
 
 The methodology and detailed results are documented in the accompanying Report.pdf.
 
-## Author
-
-Created as a machine learning project for spoken digit recognition.
